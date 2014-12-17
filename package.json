@@ -1,0 +1,16 @@
+{
+  "name": "menu-service",
+  "description": "menu-service",
+  "version": "0.0.0",
+  "author": {
+    "name": "serandives",
+    "email": "serandives@gmail.com"
+  },
+  "dependencies": {
+    "utils": "serandules/utils#master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/serandules/menu-service.git"
+  }
+}
