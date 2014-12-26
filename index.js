@@ -31,7 +31,7 @@ app.get('/menus/:id', function (req, res) {
         res.send(menu);
         return;
     }
-    debug('auth token %s found for user %s', token.id, token.user);
+    debug('auth token %s found for user %s', token.access, token.user);
     menu.menu.push({
         url: '/user',
         title: 'Account'
