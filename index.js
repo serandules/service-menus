@@ -1,12 +1,12 @@
-var debug = require('debug')('menu-service');
+var log = require('logger')('menu-service');
 var utils = require('utils');
 
 var express = require('express');
-var app = module.exports = express();
+var router = express.Router();
 
-app.use(express.json());
+module.exports = router;
 
-app.get('/menus/:id', function (req, res) {
+router.get('/menus/:id', function (req, res) {
     //var menu = menus[req.params.id];
     var menus = [
         {
@@ -21,7 +21,7 @@ app.get('/menus/:id', function (req, res) {
     ];
     var menu = menus[0];
     if (!menu) {
-        res.send(404, {
+        res.status(404).send({
             error: 'specified menu cannot be found'
         });
         return;
@@ -31,7 +31,7 @@ app.get('/menus/:id', function (req, res) {
         res.send(menu);
         return;
     }
-    debug('auth token %s found for user %s', token.access, token.user);
+    log.debug('auth token %s found for user %s', token.access, token.user);
     menu.menu.push({
         url: '/user',
         title: 'Account'
