@@ -12,7 +12,7 @@ router.get('/menus/:id', function (req, res) {
         {
             home: {url: '/', title: 'serandives.com'},
             menu: [
-                {url: 'https://auto.serandives.com', title: 'Auto'},
+                {url: 'https://autos.serandives.com', title: 'Autos'},
                 {url: 'https://hotels.serandives.com', title: 'Hotels'},
                 {url: 'https://jobs.serandives.com', title: 'Jobs'},
                 {url: 'https://states.serandives.com', title: 'Real States'}
