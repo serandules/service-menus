@@ -7,8 +7,8 @@
         "email": "serandives@gmail.com"
     },
     "dependencies": {
+        "express": "4.*",
         "logger": "serandules/logger#master",
-        "debug": "*",
         "utils": "serandules/utils#master"
     },
     "repository": {
