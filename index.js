@@ -1,4 +1,4 @@
-var log = require('logger')('menu-service');
+var log = require('logger')('menu-services');
 var utils = require('utils');
 
 var express = require('express');
@@ -9,10 +9,10 @@ module.exports = router;
 router.get('/menus/:id', function (req, res) {
     var menus = [
         {
-            home: {url: '/', title: 'autos'},
+            home: {url: '/', title: 'accounts'},
             menu: [
-                {url: 'https://autos.serandives.com', title: 'Autos'},
-                {url: 'https://hotels.serandives.com', title: 'Hotels'},
+                {url: '/signin?name=ruchira ', title: 'Manage'},
+                {url: '/signup', title: 'Hotels'},
                 {url: 'https://jobs.serandives.com', title: 'Jobs'},
                 {url: 'https://states.serandives.com', title: 'Real States'}
             ]
@@ -42,7 +42,13 @@ router.get('/menus/:id', function (req, res) {
     }
     menu.menu.push({
         url: 'https://accounts.serandives.com',
-        title: 'Account'
+        title: 'Profile'
     });
+    /*if (token.can('users', 'read')) {
+     menu.menu.push({
+     url: '/users',
+     title: 'Users'
+     });
+     }*/
     res.send(menu);
 });
