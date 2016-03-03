@@ -20,8 +20,7 @@ router.get('/menus/:id', function (req, res) {
         {
             home: {url: '/', title: 'autos'},
             menu: [
-                {url: '/signin', title: 'Sign in'},
-                {url: '/signup', title: 'Sign up'},
+                {url: '/add', title: 'Add'},
                 {url: 'https://jobs.serandives.com', title: 'Jobs'},
                 {url: 'https://states.serandives.com', title: 'Real States'}
             ]
