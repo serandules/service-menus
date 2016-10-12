@@ -29,9 +29,10 @@ router.get('/menus/:id', function (req, res) {
     var id = req.params.id;
     var menu = menus[id];
     if (!menu) {
-        res.status(404).send({
-            error: 'specified menu cannot be found'
-        });
+        res.status(404).send([{
+            code: 404,
+            message: 'Menu Not Found'
+        }]);
         return;
     }
     var token = req.token;
