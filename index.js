@@ -13,8 +13,8 @@ router.get('/menus/:id', function (req, res) {
             menu: [
                 {url: '/signin?name=ruchira ', title: 'Manage'},
                 {url: '/signup', title: 'Hotels'},
-                {url: 'https://jobs.serandives.com', title: 'Jobs'},
-                {url: 'https://states.serandives.com', title: 'Real States'}
+                {url: 'advertising://', title: 'Advertising'},
+                {url: 'autos://', title: 'Autos'}
             ]
         },
         {
@@ -22,8 +22,15 @@ router.get('/menus/:id', function (req, res) {
             menu: [
                 {url: '/vehicles', title: 'Search'},
                 {url: '/add', title: 'Add'},
-                {url: 'https://jobs.serandives.com', title: 'Jobs'},
-                {url: 'https://states.serandives.com', title: 'Real States'}
+                {url: 'advertising://', title: 'Advertising'}
+            ]
+        },
+        {
+            home: {url: '/', title: 'advertising'},
+            menu: [
+                {url: '/advertisements', title: 'Search'},
+                {url: '/add', title: 'Add'},
+                {url: 'autos://', title: 'Autos'}
             ]
         }
     ];
@@ -42,7 +49,7 @@ router.get('/menus/:id', function (req, res) {
         return;
     }
     menu.menu.push({
-        url: 'https://accounts.serandives.com',
+        url: 'accounts://',
         title: 'Profile'
     });
     /*if (token.can('users', 'read')) {
