@@ -10,28 +10,32 @@ router.get('/menus/:id', function (req, res) {
     var menus = [
         {
             home: {url: '/', title: 'accounts'},
-            menu: [
+            global: [
                 {url: '/signin?name=ruchira ', title: 'Manage'},
                 {url: '/signup', title: 'Hotels'},
                 {url: 'advertising://', title: 'Advertising'},
                 {url: 'autos://', title: 'Autos'}
-            ]
+            ],
+            local: []
         },
         {
             home: {url: '/', title: 'autos'},
-            menu: [
-                {url: '/vehicles', title: 'Search'},
+            global: [
+                {url: '/vehicles', title: 'Search'}
+            ],
+            local: [
                 {url: '/add', title: 'Add'},
-                {url: 'advertising://', title: 'Advertising'}
+                {url: '/mine', title: 'My Vehicles'}
             ]
         },
         {
             home: {url: '/', title: 'advertising'},
-            menu: [
+            global: [
                 {url: '/advertisements', title: 'Search'},
                 {url: '/add', title: 'Add'},
                 {url: 'autos://', title: 'Autos'}
-            ]
+            ],
+            local: []
         }
     ];
     var id = req.params.id;
@@ -48,10 +52,6 @@ router.get('/menus/:id', function (req, res) {
         res.send(menu);
         return;
     }
-    menu.menu.push({
-        url: 'accounts://',
-        title: 'Profile'
-    });
     /*if (token.can('users', 'read')) {
      menu.menu.push({
      url: '/users',
