@@ -1,6 +1,6 @@
 {
-    "name": "menu-service",
-    "description": "menu-service",
+    "name": "service-menus",
+    "description": "service-menus",
     "version": "0.0.0",
     "author": {
         "name": "serandives",
@@ -13,6 +13,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "git://github.com/serandules/menu-service.git"
+        "url": "git://github.com/serandules/service-menus.git"
     }
 }
