@@ -3,11 +3,13 @@ var bodyParser = require('body-parser');
 
 var utils = require('utils');
 var auth = require('auth');
+var throttle = require('throttle');
 var serandi = require('serandi');
 
 module.exports = function (router) {
     router.use(serandi.ctx);
-    // router.use(auth({}));
+    //router.use(auth({}));
+    //router.use(throttle({name: 'menus'}));
     router.use(bodyParser.json());
 
     router.get('/:id', function (req, res) {

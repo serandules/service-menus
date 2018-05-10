@@ -9,7 +9,9 @@
     "dependencies": {
         "express": "4.*",
         "logger": "serandules/logger#master",
-        "utils": "serandules/utils#master"
+        "utils": "serandules/utils#master",
+        "auth": "serandules/auth#master",
+        "throttle": "serandules/throttle#master"
     },
     "repository": {
         "type": "git",
