@@ -9,7 +9,7 @@ var serandi = require('serandi');
 module.exports = function (router) {
     router.use(serandi.ctx);
     router.use(auth({}));
-    router.use(throttle({name: 'menus'}));
+    router.use(throttle.apis({name: 'menus'}));
     router.use(serandi.cors);
     router.use(bodyParser.json());
 
