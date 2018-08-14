@@ -8,13 +8,19 @@ var serandi = require('serandi');
 
 module.exports = function (router) {
     router.use(serandi.ctx);
-    router.use(auth({}));
     router.use(throttle.apis({name: 'menus'}));
-    router.use(serandi.cors);
     router.use(bodyParser.json());
 
     router.get('/:id', function (req, res) {
         var menus = [
+            {
+              home: {url: '/', title: 'accounts'},
+              global: [
+                {url: 'advertising://', title: 'Advertising'},
+                {url: 'autos://', title: 'Autos'}
+              ],
+              local: []
+            },
             {
                 home: {url: '/', title: 'accounts'},
                 global: [
