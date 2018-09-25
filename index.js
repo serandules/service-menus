@@ -19,7 +19,10 @@ module.exports = function (router) {
                 {url: 'advertising://', title: 'Advertising'},
                 {url: 'autos://', title: 'Autos'}
               ],
-              local: []
+              local: [],
+              user: [
+                {url: '/profile', title: 'Profile'}
+              ]
             },
             {
                 home: {url: '/', title: 'accounts'},
