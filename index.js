@@ -6,7 +6,7 @@ var auth = require('auth');
 var throttle = require('throttle');
 var serandi = require('serandi');
 
-module.exports = function (router) {
+module.exports = function (router, done) {
     router.use(serandi.ctx);
     router.use(throttle.apis({name: 'menus'}));
     router.use(bodyParser.json());
@@ -79,4 +79,6 @@ module.exports = function (router) {
          }*/
         res.send(menu);
     });
+
+    done();
 };
