@@ -21,7 +21,9 @@ module.exports = function (router, done) {
               ],
               local: [],
               user: [
-                {url: '/profile', title: 'Profile'}
+                {url: '/profile', title: 'Profile'},
+                  {url: '/contacts', title: 'Contacts'},
+                  {url: '/locations', title: 'Locations'}
               ]
             },
             {
@@ -40,7 +42,7 @@ module.exports = function (router, done) {
                     {url: '/vehicles', title: 'Search'}
                 ],
                 local: [
-                    {url: '/add', title: 'Add'},
+                    {url: 'create-vehicles', title: 'Add'},
                     {url: '/mine', title: 'My Vehicles'}
                 ],
                 user: [
@@ -51,7 +53,7 @@ module.exports = function (router, done) {
                 home: {url: '/', title: 'advertising'},
                 global: [
                     {url: '/advertisements', title: 'Search'},
-                    {url: '/add', title: 'Add'},
+                    {url: '/create-advertisements', title: 'Add'},
                     {url: 'autos://', title: 'Autos'}
                 ],
                 local: []
