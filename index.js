@@ -42,7 +42,7 @@ module.exports = function (router, done) {
                     {url: '/vehicles', title: 'Search'}
                 ],
                 local: [
-                    {url: 'create-vehicles', title: 'Add'},
+                    {url: '/create-vehicles', title: 'Add'},
                     {url: '/mine', title: 'My Vehicles'}
                 ],
                 user: [
