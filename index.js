@@ -16,7 +16,6 @@ module.exports = function (router, done) {
             {
               home: {url: '/', title: 'accounts'},
               global: [
-                {url: 'advertising://', title: 'Advertising'},
                 {url: 'autos://', title: 'Autos'}
               ],
               local: [],
@@ -31,10 +30,22 @@ module.exports = function (router, done) {
                 global: [
                     {url: '/signin?name=ruchira ', title: 'Manage'},
                     {url: '/signup', title: 'Hotels'},
-                    {url: 'advertising://', title: 'Advertising'},
                     {url: 'autos://', title: 'Autos'}
                 ],
                 local: []
+            },
+            {
+                home: {url: '/', title: 'admin'},
+                global: [
+                    {url: 'autos://', title: 'Autos'},
+                    {url: 'accounts://', title: 'Accounts'}
+                ],
+                local: [
+                    {url: '/vehicles', title: 'Vehicles'}
+                ],
+                user: [
+                  {url: 'accounts://', title: 'Account'}
+                ]
             },
             {
                 home: {url: '/', title: 'autos'},
