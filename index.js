@@ -41,6 +41,8 @@ module.exports = function (router, done) {
                     {url: 'accounts://', title: 'Accounts'}
                 ],
                 local: [
+                    {url: '/locations', title: 'Locations'},
+                    {url: '/contacts', title: 'Contacts'},
                     {url: '/vehicles', title: 'Vehicles'}
                 ],
                 user: [
