@@ -70,6 +70,19 @@ module.exports = function (router, done) {
                     {url: 'autos://', title: 'Autos'}
                 ],
                 local: []
+            },
+            {
+                home: {url: '/', title: 'serandives'},
+                global: [
+                    {url: 'autos://', title: 'Autos'},
+                    {url: 'realestates://', title: 'Real Estates'}
+                ],
+                local: [
+                    {url: 'accounts://', title: 'Accounts'}
+                ],
+                user: [
+                    {url: 'accounts://', title: 'Account'}
+                ]
             }
         ];
         var id = req.params.id;
